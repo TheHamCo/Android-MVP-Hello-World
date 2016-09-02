@@ -12,7 +12,8 @@ public interface LoginContract {
     public interface View {
         void showOnboarding(String onboardMessage);
         void showWrongPassword(String errorMessage);
-        void showArticlesList(String confirmMessage);
+        void showConfirmMessage(String confirmMessage);
+        void showArticlesList();
     }
 
 }

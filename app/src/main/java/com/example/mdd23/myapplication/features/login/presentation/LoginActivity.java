@@ -54,8 +54,12 @@ public class LoginActivity extends AppCompatActivity implements LoginContract.Vi
     }
 
     @Override
-    public void showArticlesList(String confirmMessage) {
+    public void showConfirmMessage(String confirmMessage) {
         showShortToast(LoginActivity.this, confirmMessage);
+    }
+
+    @Override
+    public void showArticlesList() {
         startActivity(new Intent(this, ArticleListActivity.class));
     }
 }

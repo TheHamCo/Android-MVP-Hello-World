@@ -21,8 +21,8 @@ public class LoginPresenter implements LoginContract.Presenter {
     @Override
     public void login(String password) {
         if (password.equals(LoginUtils.PASSWORD)){
-            loginView.showArticlesList("Welcome!");
-
+            loginView.showConfirmMessage("Welcome!");
+            loginView.showArticlesList();
         } else {
             loginView.showWrongPassword("Try Again!");
         }
