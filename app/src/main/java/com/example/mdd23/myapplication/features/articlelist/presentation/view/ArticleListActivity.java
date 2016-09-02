@@ -42,10 +42,7 @@ public class ArticleListActivity extends AppCompatActivity implements ArticleLis
 
     @OnItemClick(R.id.article_summaries)
     void onArticleSelected(int position) {
-        long articleId = articleAdapter.getItem(position).getId();
-        Intent intent = new Intent(this, ArticleDetailActivity.class)
-                .putExtra(ArticleDetailActivity.INTENT_EXTRA_ARTICLE_ID, articleId);
-        startActivity(intent);
+        articlePresenter.openArticleDetail(position);
     }
 
     @Override
@@ -56,5 +53,12 @@ public class ArticleListActivity extends AppCompatActivity implements ArticleLis
     @Override
     public void showError() {
         showShortToast(ArticleListActivity.this, "Error loading articles!");
+    }
+
+    @Override
+    public void showArticleDetail(long articleId) {
+        Intent intent = new Intent(this, ArticleDetailActivity.class)
+                .putExtra(ArticleDetailActivity.INTENT_EXTRA_ARTICLE_ID, articleId);
+        startActivity(intent);
     }
 }

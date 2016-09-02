@@ -14,6 +14,7 @@ public class ArticleListPresenter implements ArticleListContract.Presenter, Arti
 
     ArticleListContract.View articleListView;
     ArticleListInteractor articleListInteractor;
+    List<ArticleSummary> articleSummaries;
 
     public ArticleListPresenter(ArticleListContract.View articleListView) {
         articleListInteractor = new ArticleListInteractorImpl(this);
@@ -26,7 +27,14 @@ public class ArticleListPresenter implements ArticleListContract.Presenter, Arti
     }
 
     @Override
+    public void openArticleDetail(int position) {
+        long articleId = articleSummaries.get(position).getId();
+        articleListView.showArticleDetail(articleId);
+    }
+
+    @Override
     public void onSuccessfulArticleLoad(List<ArticleSummary> articleSummaries) {
+        this.articleSummaries = articleSummaries;
         articleListView.showListOfArticles(articleSummaries);
     }
 

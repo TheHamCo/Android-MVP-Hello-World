@@ -10,10 +10,12 @@ import java.util.List;
 public interface ArticleListContract {
     interface Presenter {
         void loadArticles();
+        void openArticleDetail(int position);
     }
 
     interface View {
         void showListOfArticles(List<ArticleSummary> articleSummaries);
         void showError();
+        void showArticleDetail(long articleId);
     }
 }
