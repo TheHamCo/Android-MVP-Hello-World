@@ -10,7 +10,7 @@ import java.util.List;
 public interface ArticleListContract {
     interface Presenter {
         void loadArticles();
-        void openArticleDetail(int position);
+        void openArticleDetail(ArticleSummary article);
     }
 
     interface View {

@@ -27,8 +27,8 @@ public class ArticleListPresenter implements ArticleListContract.Presenter, Arti
     }
 
     @Override
-    public void openArticleDetail(int position) {
-        long articleId = articleSummaries.get(position).getId();
+    public void openArticleDetail(ArticleSummary articleSummary) {
+        long articleId = articleSummary.getId();
         articleListView.showArticleDetail(articleId);
     }
 
