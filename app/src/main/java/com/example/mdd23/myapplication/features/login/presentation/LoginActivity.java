@@ -58,9 +58,4 @@ public class LoginActivity extends AppCompatActivity implements LoginContract.Vi
         showShortToast(LoginActivity.this, confirmMessage);
         startActivity(new Intent(this, ArticleListActivity.class));
     }
-
-    @Override
-    public void navigateToList() {
-        startActivity(new Intent());
-    }
 }

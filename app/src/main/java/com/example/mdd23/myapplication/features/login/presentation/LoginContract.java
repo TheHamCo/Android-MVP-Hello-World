@@ -13,7 +13,6 @@ public interface LoginContract {
         void showOnboarding(String onboardMessage);
         void showWrongPassword(String errorMessage);
         void showArticlesList(String confirmMessage);
-        void navigateToList();
     }
 
 }
