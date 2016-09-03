@@ -5,7 +5,6 @@ import android.os.Bundle;
 import android.support.v7.app.AppCompatActivity;
 import android.widget.ListView;
 
-import com.example.mdd23.myapplication.DataManager.Article;
 import com.example.mdd23.myapplication.R;
 import com.example.mdd23.myapplication.features.articledetail.presentation.ArticleDetailActivity;
 import com.example.mdd23.myapplication.features.articlelist.domain.ArticleSummary;
